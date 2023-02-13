@@ -1,17 +1,14 @@
 
 
-    <?php
-    echo "My first PHP script!";
-    ?>
-
 <?php
-$t = date("H");
 
-if ($t < "20") {
-  echo "Have a good day!";
-} else {
-  echo "Have a good night!";
-}
+$fee = 5000;
+
+$commission = ($fee>20000)?("The commission is 25%"):(($fee>10000 && $fee<20000)?("The commission is 20%"):(($fee<10000 && $fee>7000)?("The commission is 15%"):("invalid")));
+
+
+echo $commission;
 ?>
 
-</html>
+
+
