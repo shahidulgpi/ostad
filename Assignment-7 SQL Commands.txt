@@ -1,0 +1,175 @@
+
+Assignment Name: SQL Commands Assignment
+
+CREATE DATABASE xyz_corp;
+
+/* Explanation SQL command:  This command is used to create a database.*/;
+
+CREATE TABLE employees(
+    EMP_ID int(11) NOT NULL AUTO_INCREMENT,    
+    Full_Name varchar(200),
+    Age int(5),
+    Salary DECIMAL(8, 2) NOT NULL,
+    Company varchar(255),
+    Address varchar(150),    
+    Dept_id INT (11) UNSIGNED,
+    PRIMARY KEY (EMP_ID)
+); 
+
+/* Explanation SQL command:  This command is used to create new table into a Database.*/;
+
+INSERT INTO employees
+VALUES (
+	1001,
+	'Neena Kochhar',
+	30,
+        17000,
+	'Samsung',
+	'Dhaka',	
+	1
+);
+
+INSERT INTO employees
+VALUES (
+	1002,
+	'Anis Kochhar',
+	35,
+        50000,
+	'Samsung',
+	'Dhaka',	
+	1
+);
+INSERT INTO employees
+VALUES (
+	1003,
+	'Rahim Khan',
+	30,
+        60000,
+	'Samsung',
+	'Dhaka',	
+	1
+);
+INSERT INTO employees
+VALUES (
+	1004,
+	'Korim Kochhar',
+	30,
+        20000,
+	'BITM',
+	'Khulna',	
+	6
+);
+INSERT INTO employees
+VALUES (
+	1005,
+	'Manik Das',
+	30,
+        17000,
+	'Ostad',
+	'Dhaka',	
+	7
+);
+
+/* Explanation SQL command:  This command is used to insert new data into a table.*/;
+
+CREATE TABLE departments (
+	dept_id INT (11) NOT NULL AUTO_INCREMENT,
+	emp_name VARCHAR(100) NOT NULL,
+	manager VAR (25) NULL,	
+	PRIMARY KEY (dept_id)
+	);
+
+/* Explanation SQL command:  This command is used to create new table into a Database.*/;
+
+INSERT INTO departments
+VALUES (
+	1,
+	1001,
+	'IT'	
+);
+
+INSERT INTO departments
+VALUES (
+	2,
+	1002,
+	'Finance'	
+);
+INSERT INTO departments
+VALUES (
+	3,
+	1003,
+	'Admin'	
+);
+INSERT INTO departments
+VALUES (
+	4,
+	1004,
+	'HR'	
+);
+INSERT INTO departments
+VALUES (
+	5,
+	1005,
+	'Management'	
+);
+
+INSERT INTO departments
+VALUES (
+	6,
+	1006,
+	'Marketing'	
+);
+INSERT INTO departments
+VALUES (
+	7,
+	1007,
+	'Marketing'	
+);
+
+/* Explanation SQL command:  This command is used to insert new data into a table.*/;
+
+
+/* Instructions For employees table question answer: */;
+
+a. SELECT * FROM employees;
+
+/* Explanation SQL command:  This command is used to Select all data into a employees table.*/;
+
+b. SELECT Full_Name, Salary FROM employees WHERE Salary>50000;
+
+/* Explanation SQL command:  This command is used to select only the name and salary columns of all employees with a salary greater than 50000 into a employees table.*/;
+
+c. SELECT AVG(Salary) FROM employees;
+
+/* Explanation SQL command:  This command is used to calculate the average salary of all employees into a employees table.*/;
+
+d. SELECT COUNT(Dept_id), Dept_id FROM employees WHERE Dept_id IN ('7') GROUP BY Dept_id ;
+
+/* Explanation SQL command:  This command is used to count the number of employees who work in the "Marketing" department into a employees table.*/;
+
+e. UPDATE employees SET Salary=60000.00 WHERE EMP_ID=1001;
+
+/* Explanation SQL command:  This command is used to update the salary column of the employee with an id of 1001 to 60000 into a employees table.*/;
+
+f. DELETE FROM `employees` WHERE Salary<30000;
+
+/* Explanation SQL command:  This command is used to delete all employees whose salary is less than 30000 into a employees table.*/;
+
+
+/* Instructions For Departments table question answer: */;
+
+a. SELECT * FROM departments;
+
+/* Explanation SQL command:  This command is used to select all columns and rows from the departments table.*/;
+
+b. SELECT emp_name, manager FROM departments WHERE manager IN ('Finance');
+
+/* Explanation SQL command:  This command is used to select only the name and manager columns of the "Finance" department data into a departments table.*/;
+
+c. SELECT COUNT(manager), manager FROM departments GROUP BY manager;
+
+/* Explanation SQL command:  This command is used to calculate the total number of employees in each department into a departments table.*/;
+
+d. INSERT INTO departments(dept_id, emp_name, manager) VALUES (8,'John Doe','Research');
+
+/* Explanation SQL command:  This command is used to  insert a new department called "Research" with a manager named "John Doe" into a departments table.*/;
