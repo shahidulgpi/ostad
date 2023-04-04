@@ -1,0 +1,17 @@
+.read-more{
+    display:block;
+    text-overflow: ellipsis;
+    width: 500px;
+    overflow: hidden; 
+    white-space: nowrap;
+    text-transform: none !important;
+    
+}
+
+ .read-more-text {
+	margin-bottom: 0px !important;
+	font-size: 15px !important;
+	font-weight: 400!important;
+	color: #7a7a7a !important;
+	line-height: 30px!important;
+}
